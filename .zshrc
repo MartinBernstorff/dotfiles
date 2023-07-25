@@ -1,0 +1,1 @@
+/Users/Leisure/Library/Mobile Documents/com~apple~CloudDocs/Mackup/.zshrc
