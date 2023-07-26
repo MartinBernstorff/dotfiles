@@ -81,6 +81,7 @@ return packer.startup(function(use)
   use { "rafamadriz/friendly-snippets", commit = "2be79d8a9b03d4175ba6b3d14b082680de1b31b1" } -- a bunch of snippets to use
 
 	-- LSP
+  use 'neovim/nvim-lspconfig'
   use {
     'VonHeikemen/lsp-zero.nvim',
     branch = 'v2.x',
@@ -101,6 +102,7 @@ return packer.startup(function(use)
       {'L3MON4D3/LuaSnip'},     -- Required
     }
   }
+
 	-- Telescope
 	use { "nvim-telescope/telescope.nvim", commit = "76ea9a898d3307244dce3573392dcf2cc38f340f" }
   use {
@@ -110,7 +112,6 @@ return packer.startup(function(use)
   }
 
   -- Rust
-  use 'neovim/nvim-lspconfig'
   use 'simrat39/rust-tools.nvim'
 
 	-- Treesitter
@@ -125,6 +126,13 @@ return packer.startup(function(use)
 	-- Git
 	use { "lewis6991/gitsigns.nvim", commit = "2c6f96dda47e55fa07052ce2e2141e8367cbaaf2" }
   use { "tpope/vim-fugitive", tag = "v3.7"}
+  
+  -- Debugging
+  use { 'nvim-lua/plenary.nvim' }
+  use { "mfussenegger/nvim-dap" }
+  use { "rcarriga/nvim-dap-ui" }
+  use { "vlopes11/rrust.nvim" }
+
 
   -- Misc
   use {"mbbill/undotree", tag = "rel_6.1"}

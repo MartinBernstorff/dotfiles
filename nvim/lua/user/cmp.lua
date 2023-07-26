@@ -1,12 +1,6 @@
 local cmp_status_ok, cmp = pcall(require, "cmp")
-if not cmp_status_ok then
-  return
-end
 
 local snip_status_ok, luasnip = pcall(require, "luasnip")
-if not snip_status_ok then
-  return
-end
 
 require("luasnip/loaders/from_vscode").lazy_load()
 
@@ -101,10 +95,10 @@ cmp.setup {
       vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
       -- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
       vim_item.menu = ({
-        nvim_lsp = "[LSP]",
-        luasnip = "[Snippet]",
-        buffer = "[Buffer]",
-        path = "[Path]",
+        nvim_lsp = "[λ]",
+        luasnip = "[S]",
+        buffer = "[B]",
+        path = "[P]",
       })[entry.source.name]
       return vim_item
     end,
@@ -123,9 +117,8 @@ cmp.setup {
     select = false,
   },
   window = {
-    documentation = {
-      border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-    },
+    documentation = cmp.config.window.bordered(),
+    completion = cmp.config.window.bordered(),
   },
   experimental = {
     ghost_text = false,
