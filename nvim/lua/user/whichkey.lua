@@ -20,7 +20,7 @@ local mappings = {
   },
   g = { "Git", {
     s = {
-      "<cmd>Git<cr>", "Git" }
+      "<cmd>Git<cr>", "[S]tatus" }
     },
     p = {
       "<cmd>Git push<cr>", "Push",
@@ -40,6 +40,12 @@ local mappings = {
       }
 
     }},
+  p = { "Projects", 
+    s = { "<cmd>Telescope projects<cr>", "[S]earch projects"}
+  },
+  q = { "Quit",
+    a = { "<cmd>wqa<cr>", "Quit [a]ll"},
+  },
   u = { "<cmd>UndotreeToggle<cr>", "Undotree"},
   w = { "<cmd>bd<cr>", "Close editor" },
   U = { "UI", {
