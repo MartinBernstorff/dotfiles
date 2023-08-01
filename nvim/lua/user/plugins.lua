@@ -128,11 +128,8 @@ return packer.startup(function(use)
   use { "tpope/vim-fugitive", tag = "v3.7"}
   
   -- Debugging
-  use { 'nvim-lua/plenary.nvim' }
-  use { "mfussenegger/nvim-dap" }
-  use { "rcarriga/nvim-dap-ui" }
-  use { "vlopes11/rrust.nvim" }
-
+  use { "puremourning/vimspector" }
+  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
 
   -- Misc
   use {"mbbill/undotree", tag = "rel_6.1"}

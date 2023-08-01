@@ -12,6 +12,15 @@ local mappings = {
     v = { "<cmd>vsplit<cr>", "Split vertically" },
     q = { "<cmd>q<cr>", "Quit window" },
   },
+  d = { "Debug",
+    {
+      b = { "<cmd>DapToggleBreakpoint<cr>", "Toggle break point"},
+      c = { "<cmd>DapContinue<cr>", "Continue"},
+      e = { "<cmd>lua require('dapui').eval()<cr>", "Evaluate" },
+      r = { "<cmd>DapRestartFrame<cr>", "Restart"},
+      s = { "<cmd>DapTerminate<cr>", "Stop"},
+    }
+  },
   f = { "File",
     {
       o = { "<cmd>:Telescope git_files<cr>", "Open file browser" },
@@ -130,7 +139,7 @@ local setup = {
 }
 
 local opts = {
-  mode = "n",     -- NORMAL mode
+  mode = {"n", "v"},     -- NORMAL mode
   prefix = "<leader>",
   buffer = nil,   -- Global mappings. Specify a buffer number for buffer local mappings
   silent = true,  -- use `silent` when creating keymaps
