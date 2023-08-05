@@ -1,0 +1,1 @@
+@reboot screen -S anki-autoupdate "/Users/$USER/Desktop/Git/personal_mnemonic_medium/update_mnemonic_medium.sh"
