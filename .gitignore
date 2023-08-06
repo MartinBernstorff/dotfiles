@@ -48,3 +48,4 @@ luac.out
 .zsh_history
 
 plugin/packer_compiled.lua
+lazygit
