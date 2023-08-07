@@ -1,0 +1,270 @@
+{
+    "title": "",
+    "rules": [
+        {
+            "description": "Disable Esc",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "escape"
+                    },
+                    "to": [
+                        {
+                            "repeat": true,
+                            "key_code": "out"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "Up-arrow",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "modifiers": {
+                            "mandatory": [
+                                "left_shift",
+                                "left_control"
+                            ],
+                            "optional": [
+                                "any"
+                            ]
+                        },
+                        "key_code": "k"
+                    },
+                    "to": [
+                        {
+                            "repeat": true,
+                            "key_code": "up_arrow"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "Escape",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "modifiers": {
+                            "mandatory": [
+                                "left_control"
+                            ],
+                            "optional": [
+                                "any"
+                            ]
+                        },
+                        "key_code": "e"
+                    },
+                    "to": [
+                        {
+                            "repeat": true,
+                            "key_code": "escape"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "Left-arrow",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "modifiers": {
+                            "mandatory": [
+                                "left_shift",
+                                "left_control"
+                            ],
+                            "optional": [
+                                "any"
+                            ]
+                        },
+                        "key_code": "h"
+                    },
+                    "to": [
+                        {
+                            "repeat": true,
+                            "key_code": "left_arrow"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "Right-arrow",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "modifiers": {
+                            "mandatory": [
+                                "left_shift",
+                                "left_control"
+                            ],
+                            "optional": [
+                                "any"
+                            ]
+                        },
+                        "key_code": "l"
+                    },
+                    "to": [
+                        {
+                            "repeat": true,
+                            "key_code": "right_arrow"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "Super+o->Delete",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "modifiers": {
+                            "mandatory": [
+                                "left_shift",
+                                "left_control"
+                            ],
+                            "optional": [
+                                "any"
+                            ]
+                        },
+                        "key_code": "o"
+                    },
+                    "to": [
+                        {
+                            "repeat": true,
+                            "key_code": "delete_or_backspace"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "Super+spacebar->Return",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "modifiers": {
+                            "mandatory": [
+                                "left_shift",
+                                "left_control"
+                            ],
+                            "optional": [
+                                "any"
+                            ]
+                        },
+                        "key_code": "spacebar"
+                    },
+                    "to": [
+                        {
+                            "repeat": true,
+                            "key_code": "return_or_enter"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "Override Super+E",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "modifiers": {
+                            "mandatory": [
+                                "caps_lock"
+                            ]
+                        },
+                        "key_code": "e"
+                    },
+                    "to": [
+                        {}
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "Super-key",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "modifiers": {
+                            "optional": [
+                                "any"
+                            ]
+                        },
+                        "key_code": "caps_lock"
+                    },
+                    "to": [
+                        {
+                            "key_code": "left_shift",
+                            "modifiers": "left_control"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "Down-arrow",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "modifiers": {
+                            "mandatory": [
+                                "left_shift",
+                                "left_control"
+                            ],
+                            "optional": [
+                                "any"
+                            ]
+                        },
+                        "key_code": "j"
+                    },
+                    "to": [
+                        {
+                            "repeat": true,
+                            "key_code": "down_arrow"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "Find",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "modifiers": {
+                            "mandatory": [
+                                "right_shift",
+                                "right_control"
+                            ],
+                            "optional": [
+                                "any"
+                            ]
+                        },
+                        "key_code": "f"
+                    },
+                    "to": [
+                        {
+                            "repeat": true,
+                            "key_code": "forward_slash"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
