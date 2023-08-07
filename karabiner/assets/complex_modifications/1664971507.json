@@ -52,10 +52,7 @@
                     "from": {
                         "modifiers": {
                             "mandatory": [
-                                "left_control"
-                            ],
-                            "optional": [
-                                "any"
+                                "left_command"
                             ]
                         },
                         "key_code": "e"
