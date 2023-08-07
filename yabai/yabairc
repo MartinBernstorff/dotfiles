@@ -13,12 +13,7 @@ yabai -m signal --add event=application_terminated action="yabai -m query --wind
 yabai -m config window_placement second_child
 
 # Mouse interactions
-yabai -m config mouse_follows_focus on
-
-# Disable apps
-yabai -m rule --add app="^System Settings$" manage=off
-yabai -m rule --add app="^Calculator$" manage=off
-yabai -m rule --add app="^Karabiner-Elements$" manage=off
+yabai -m config mouse_follows_focus off
 
 # Borders
 # yabai -m config window_border on
@@ -26,3 +21,6 @@ yabai -m rule --add app="^Karabiner-Elements$" manage=off
 # yabai -m config window_border_width 2
 # yabai -m config active_window_border_color 0xff775759 
 # yabai -m config normal_window_border_color 0xff222222 
+
+# Do not tile non-resizeable windows
+yabai -m signal --add event=window_created action='yabai -m query --windows --window $YABAI_WINDOW_ID | jq -er ".\"can-resize\" or .\"is-floating\"" || yabai -m window $YABAI_WINDOW_ID --toggle float'
