@@ -2,14 +2,17 @@
 ctrl + cmd - h : yabai -m window --focus prev
 ctrl + cmd - l : yabai -m window --focus next
 
+# Changing split
+ctrl + cmd - q : yabai -m window --toggle split
+
 # Fullscreen
-ctrl + cmd + cmd - f : yabai -m window --toggle zoom-fullscreen
+ctrl + cmd - f : yabai -m window --toggle zoom-fullscreen
 
 # Moving windows
-ctrl + cmd + cmd - w : yabai -m window --swap north
-ctrl + cmd + cmd - s : yabai -m window --swap south
-ctrl + cmd + cmd - a : yabai -m window --swap west
-ctrl + cmd + cmd - d : yabai -m window --swap east
+ctrl + cmd - w : yabai -m window --swap north
+ctrl + cmd - a : yabai -m window --swap west
+ctrl + cmd - s : yabai -m window --swap south
+ctrl + cmd - d : yabai -m window --swap east
 
 # move window to space #
 shift + alt - 1 : yabai -m window --space 1;
@@ -21,5 +24,14 @@ shift + alt - 6 : yabai -m window --space 6;
 shift + alt - 7 : yabai -m window --space 7;
 
 # Resize windows
-ctrl + cmd - i: yabai -m window --resize right:-335:0 2> /dev/null || yabai -m window --resize left:-335:0 2> /dev/null 
-ctrl + cmd - o: yabai -m window --resize right:335:0 2> /dev/null || yabai -m window --resize left:335:0 2> /dev/null 
+ctrl + cmd - i: yabai -m window --resize right:-160:0 2> /dev/null || yabai -m window --resize left:-160:0 2> /dev/null 
+ctrl + cmd - o: yabai -m window --resize right:160:0 2> /dev/null || yabai -m window --resize left:160:0 2> /dev/null 
+
+# Restart yabai
+ctrl + cmd - r : yabai --restart-service
+
+# Balance windows
+ctrl + cmd - b : yabai -m space --balance
+
+# Float
+ctrl + cmd - c : yabai -m window --toggle float
