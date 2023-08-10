@@ -76,3 +76,5 @@ alias nvini="nvim $NVCONF/init.lua"
 alias nvuser="nvim $NVUSER"
 alias nvkb="nvim $NVUSER/whichkey.lua"
 alias rc="nvim $CONF/.zshrc"
+# Created by `pipx` on 2023-08-07 16:31:22
+export PATH="$PATH:/Users/Leisure/.local/bin"
