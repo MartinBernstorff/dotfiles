@@ -51,3 +51,4 @@ plugin/packer_compiled.lua
 lazygit
 nvim/plugin/packer_compiled.lua
 karabiner/automatic_backups
+gh/hosts.yml
