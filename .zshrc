@@ -53,7 +53,6 @@ setopt HIST_EXPIRE_DUPS_FIRST
 # Expand paths
 export PATH="/usr/local/anaconda3/bin:$PATH"
 export PATH="/Users/Leisure/.local/bin:$PATH"
-export GITHUB_TOKEN="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"
 export PIPENV_VENV_IN_PROJECT=1
 export PATH="/Users/au484925/.local/bin:$PATH"
 
