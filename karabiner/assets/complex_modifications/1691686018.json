@@ -1,0 +1,92 @@
+{
+  "title": "Make tilde (~), backtick (`) and accent circumflex ^ work with one keystroke on Mac, Danish.",
+  "rules": [
+    {
+      "description": "^ in one keystroke",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "modifiers": {
+              "mandatory": [
+                "left_shift"
+              ]
+            },
+            "key_code": "close_bracket"
+          },
+          "to": [
+            {
+              "repeat": false,
+              "key_code": "close_bracket",
+              "modifiers": [
+                "shift"
+              ]
+            },
+            {
+              "repeat": false,
+              "key_code": "right_arrow"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "~ in one keystroke",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "modifiers": {
+              "mandatory": [
+                "left_alt"
+              ]
+            },
+            "key_code": "close_bracket"
+          },
+          "to": [
+            {
+              "repeat": false,
+              "key_code": "close_bracket",
+              "modifiers": [
+                "left_alt"
+              ]
+            },
+            {
+              "repeat": false,
+              "key_code": "right_arrow"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "backtick in one keystroke",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "modifiers": {
+              "mandatory": [
+                "left_shift"
+              ]
+            },
+            "key_code": "equal_sign"
+          },
+          "to": [
+            {
+              "repeat": false,
+              "key_code": "equal_sign",
+              "modifiers": [
+                "left_shift"
+              ]
+            },
+            {
+              "repeat": false,
+              "key_code": "right_arrow"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -4,13 +4,16 @@ ctrl + cmd - j : yabai -m window --focus south
 ctrl + cmd - k : yabai -m window --focus north
 ctrl + cmd - l : yabai -m window --focus east
 
+# Changing split
+ctrl + cmd - q : yabai -m window --toggle split
+
 # Fullscreen
 ctrl + cmd - f : yabai -m window --toggle zoom-fullscreen
 
 # Moving windows
 ctrl + cmd - w : yabai -m window --swap north
-ctrl + cmd - s : yabai -m window --swap south
 ctrl + cmd - a : yabai -m window --swap west
+ctrl + cmd - s : yabai -m window --swap south
 ctrl + cmd - d : yabai -m window --swap east
 
 # Move to another display
