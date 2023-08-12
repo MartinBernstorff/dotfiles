@@ -1,3 +1,5 @@
+EDITOR="nvim"
+
 # Load Antigen
 source "$HOME/antigen.zsh"
 
@@ -64,6 +66,10 @@ export PATH="/Users/au484925/.local/bin:$PATH"
 # ALIASES #
 ###########
 alias lg='lazygit'
+
+alias ll="ls -lah"
+alias grep="ripgrep --color=auto"
+alias zrc="$EDITOR $HOME/.zshrc"
 
 
 # nvim aliases
