@@ -1,7 +1,7 @@
 {
   "title": "@ Home Home Row Keys for Modifiers (using if_alone)",
   "maintainers": [
-    "eytanhanig"
+    "@m_bernstorff"
   ],
   "rules": [
     {
@@ -9,8 +9,7 @@
       "manipulators": [
         {
           "parameters": {
-            "basic.to_delayed_action_delay_milliseconds": 70,
-            "basic.to_if_held_down_threshold_milliseconds": 70
+            "basic.to_if_held_down_threshold_milliseconds": 80
           },
           "description": "Hold A ⟶ Left Shift",
           "type": "basic",
@@ -22,29 +21,21 @@
               ]
             }
           },
-          "to_delayed_action": {
-            "to_if_canceled": [
-              {
-                "key_code": "a"
-              }
-            ]
-          },
-          "to_if_alone": [
+          "to_if_held_down": [
             {
-              "key_code": "a",
+              "key_code": "left_shift",
               "halt": true
             }
           ],
-          "to_if_held_down": [
+          "to_after_key_up": [
             {
-              "key_code": "left_shift"
+              "key_code": "a"
             }
           ]
         },
         {
           "parameters": {
-            "basic.to_delayed_action_delay_milliseconds": 70,
-            "basic.to_if_held_down_threshold_milliseconds": 70
+            "basic.to_if_held_down_threshold_milliseconds": 80
           },
           "description": "Hold S ⟶ Left Control",
           "type": "basic",
@@ -56,29 +47,21 @@
               ]
             }
           },
-          "to_delayed_action": {
-            "to_if_canceled": [
-              {
-                "key_code": "s"
-              }
-            ]
-          },
-          "to_if_alone": [
+          "to_if_held_down": [
             {
-              "key_code": "s",
+              "key_code": "left_control",
               "halt": true
             }
           ],
-          "to_if_held_down": [
+          "to_after_key_up": [
             {
-              "key_code": "left_control"
+              "key_code": "s"
             }
           ]
         },
         {
           "parameters": {
-            "basic.to_delayed_action_delay_milliseconds": 70,
-            "basic.to_if_held_down_threshold_milliseconds": 70
+            "basic.to_if_held_down_threshold_milliseconds": 80
           },
           "description": "Hold D ⟶ Left Option",
           "type": "basic",
@@ -90,29 +73,21 @@
               ]
             }
           },
-          "to_delayed_action": {
-            "to_if_canceled": [
-              {
-                "key_code": "d"
-              }
-            ]
-          },
-          "to_if_alone": [
+          "to_if_held_down": [
             {
-              "key_code": "d",
+              "key_code": "left_option",
               "halt": true
             }
           ],
-          "to_if_held_down": [
+          "to_after_key_up": [
             {
-              "key_code": "left_option"
+              "key_code": "d"
             }
           ]
         },
         {
           "parameters": {
-            "basic.to_delayed_action_delay_milliseconds": 70,
-            "basic.to_if_held_down_threshold_milliseconds": 70
+            "basic.to_if_held_down_threshold_milliseconds": 80
           },
           "description": "Hold F ⟶ Left Command",
           "type": "basic",
@@ -124,58 +99,88 @@
               ]
             }
           },
-          "to_delayed_action": {
-            "to_if_canceled": [
-              {
-                "key_code": "f"
-              }
-            ]
-          },
-          "to_if_alone": [
+          "to_if_held_down": [
             {
-              "key_code": "f",
+              "key_code": "left_command",
               "halt": true
             }
           ],
-          "to_if_held_down": [
+          "to_after_key_up": [
             {
-              "key_code": "left_command"
+              "key_code": "f"
             }
           ]
         },
         {
           "parameters": {
-            "basic.to_delayed_action_delay_milliseconds": 70,
-            "basic.to_if_held_down_threshold_milliseconds": 70
+            "basic.to_if_held_down_threshold_milliseconds": 80
           },
-          "description": "Hold Æ ⟶ Right Shift",
+          "description": "Hold Semicolon ⟶ Right Shift",
           "type": "basic",
           "from": {
-            "key_code": "æ",
+            "key_code": "semicolon",
             "modifiers": {
               "optional": [
                 "any"
               ]
             }
           },
-          "to_delayed_action": {
-            "to_if_canceled": [
-              {
-                "key_code": "æ"
-              }
-            ]
-          },
-          "to_if_alone": [
+          "to_if_held_down": [
             {
-              "key_code": "æ",
+              "key_code": "right_shift",
               "halt": true
             }
           ],
-          "to_if_held_down": [
+          "to_after_key_up": [
             {
-              "key_code": "right_shift"
+              "key_code": "semicolon"
             }
           ]
+        }
+      ]
+    },
+    {
+      "description": "Disable left modifier cluster",
+      "manipulators": [
+        {
+          "description": "Hold Left Shift",
+          "type": "basic",
+          "from": {
+            "key_code": "left_shift"
+          },
+          "to": {
+            "key_code": "vk_none"
+          }
+        },
+        {
+          "description": "Hold Left Control",
+          "type": "basic",
+          "from": {
+            "key_code": "left_control"
+          },
+          "to": {
+            "key_code": "vk_none"
+          }
+        },
+        {
+          "description": "Hold Left Option",
+          "type": "basic",
+          "from": {
+            "key_code": "left_option"
+          },
+          "to": {
+            "key_code": "vk_none"
+          }
+        },
+        {
+          "description": "Hold Left Command",
+          "type": "basic",
+          "from": {
+            "key_code": "left_command"
+          },
+          "to": {
+            "key_code": "vk_none"
+          }
         }
       ]
     }
