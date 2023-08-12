@@ -7,9 +7,6 @@ ctrl + cmd - l : yabai -m window --focus east
 # Changing split
 ctrl + cmd - q : yabai -m window --toggle split
 
-# Fullscreen
-ctrl + cmd - f : yabai -m window --toggle zoom-fullscreen
-
 # Moving windows
 ctrl + cmd - w : yabai -m window --swap north
 ctrl + cmd - a : yabai -m window --swap west
@@ -23,3 +20,6 @@ ctrl + alt + cmd - d : yabai -m window --display prev
 # Resize windows
 ctrl + cmd - i: yabai -m window --resize right:-335:0 2> /dev/null || yabai -m window --resize left:-335:0 2> /dev/null 
 ctrl + cmd - o: yabai -m window --resize right:335:0 2> /dev/null || yabai -m window --resize left:335:0 2> /dev/null 
+
+# Toggle float
+ctrl + cmd - f: yabai -m window --toggle float
