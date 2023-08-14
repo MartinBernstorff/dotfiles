@@ -18,16 +18,26 @@
                 },
                 "rules": [
                     {
-                        "description": "Disable Esc",
+                        "description": "Super-key and Esc",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "escape"
+                                    "key_code": "caps_lock",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
                                 "to": [
                                     {
-                                        "key_code": "out",
-                                        "repeat": true
+                                        "key_code": "left_shift",
+                                        "modifiers": "left_control"
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "escape"
                                     }
                                 ],
                                 "type": "basic"
@@ -70,28 +80,6 @@
                                 "to": [
                                     {
                                         "key_code": "up_arrow",
-                                        "repeat": true
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Escape",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "e",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_command"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "escape",
                                         "repeat": true
                                     }
                                 ],
@@ -217,28 +205,6 @@
                                 },
                                 "to": [
                                     {}
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Super-key",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "caps_lock",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_shift",
-                                        "modifiers": "left_control"
-                                    }
                                 ],
                                 "type": "basic"
                             }
