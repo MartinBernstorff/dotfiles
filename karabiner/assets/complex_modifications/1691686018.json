@@ -7,11 +7,6 @@
         {
           "type": "basic",
           "from": {
-            "modifiers": {
-              "mandatory": [
-                "left_shift"
-              ]
-            },
             "key_code": "close_bracket"
           },
           "to": [
@@ -65,11 +60,6 @@
         {
           "type": "basic",
           "from": {
-            "modifiers": {
-              "mandatory": [
-                "left_shift"
-              ]
-            },
             "key_code": "equal_sign"
           },
           "to": [

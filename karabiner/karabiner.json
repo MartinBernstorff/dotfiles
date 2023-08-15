@@ -241,12 +241,7 @@
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "close_bracket",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_shift"
-                                        ]
-                                    }
+                                    "key_code": "close_bracket"
                                 },
                                 "to": [
                                     {
@@ -299,12 +294,7 @@
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "equal_sign",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_shift"
-                                        ]
-                                    }
+                                    "key_code": "equal_sign"
                                 },
                                 "to": [
                                     {
