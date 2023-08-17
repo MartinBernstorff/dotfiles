@@ -1,5 +1,5 @@
 {
-    "title": "",
+    "title": "My rules",
     "rules": [
         {
             "description": "Disable Esc",
@@ -52,7 +52,8 @@
                     "from": {
                         "modifiers": {
                             "mandatory": [
-                                "left_command"
+                                "left_control",
+                                "left_shift"
                             ]
                         },
                         "key_code": "e"
@@ -87,6 +88,49 @@
                         {
                             "repeat": true,
                             "key_code": "left_arrow"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "Right command",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "modifiers": {
+                            "optional": [
+                                "any"
+                            ]
+                        },
+                        "key_code": "caps_lock"
+                    },
+                    "to": [
+                        {
+                            "key_code": "left_command"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "Super-key",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "modifiers": {
+                            "optional": [
+                                "any"
+                            ]
+                        },
+                        "key_code": "right_command"
+                    },
+                    "to": [
+                        {
+                            "key_code": "left_shift",
+                            "modifiers": "left_control"
                         }
                     ]
                 }
@@ -165,28 +209,6 @@
                         {
                             "repeat": true,
                             "key_code": "return_or_enter"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "description": "Super-key",
-            "manipulators": [
-                {
-                    "type": "basic",
-                    "from": {
-                        "modifiers": {
-                            "optional": [
-                                "any"
-                            ]
-                        },
-                        "key_code": "caps_lock"
-                    },
-                    "to": [
-                        {
-                            "key_code": "left_shift",
-                            "modifiers": "left_control"
                         }
                     ]
                 }
