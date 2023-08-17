@@ -1,0 +1,22 @@
+{
+    "title": "Training",
+    "rules": [
+        {
+            "description": "Disable left shift",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "left_shift"
+                    },
+                    "to": [
+                        {
+                            "repeat": true,
+                            "key_code": "vk_none"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -16,10 +16,6 @@
               "modifiers": [
                 "shift"
               ]
-            },
-            {
-              "repeat": false,
-              "key_code": "right_arrow"
             }
           ]
         }

@@ -52,8 +52,7 @@
                     "from": {
                         "modifiers": {
                             "mandatory": [
-                                "left_control",
-                                "left_shift"
+                                "left_command"
                             ]
                         },
                         "key_code": "e"
@@ -172,7 +171,7 @@
             ]
         },
         {
-            "description": "Super-key and Esc",
+            "description": "Super-key",
             "manipulators": [
                 {
                     "type": "basic",
@@ -188,11 +187,6 @@
                         {
                             "key_code": "left_shift",
                             "modifiers": "left_control"
-                        }
-                    ],
-                    "to_if_alone": [
-                        {
-                            "key_code": "escape"
                         }
                     ]
                 }
@@ -245,6 +239,28 @@
                         {
                             "repeat": true,
                             "key_code": "forward_slash"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "Right command to shift",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "modifiers": {
+                            "optional": [
+                                "any"
+                            ]
+                        },
+                        "key_code": "right_command"
+                    },
+                    "to": [
+                        {
+                            "repeat": true,
+                            "key_code": "right_shift"
                         }
                     ]
                 }

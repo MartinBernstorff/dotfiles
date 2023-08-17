@@ -18,7 +18,7 @@ def main
           # Right Hand
           # generate_hold_modifier_only("j", "right_command"),
           # generate_hold_modifier_only("k", "right_option"),
-          # generate_hold_modifier_only("l", "right_control"),
+          generate_hold_modifier_only("l", "right_control"),
           generate_hold_modifier_only("semicolon", "right_shift"),
           # generate_hold_modifier_only("quote", "right_control"),
         ],
