@@ -74,10 +74,30 @@
                  [:d :!TSd]
                  [:s :!TSs]
                  [:t :!TSt]
+                 [:a :!TSa]
          ]
          }
          {:des "cmd + e to escape" :rules [[:!Ce :escape]]}
          {:des "caps_lock alone to escape" :rules [[:caps_lock :escape]]}
+         {:des "right-cmd for symbols" :rules [:right_cmd_mode 
+                                               ;; parentheses
+                                               [:d :!S8]
+                                               [:s :!O8]
+                                               [:a :!SO8]
+                                               [:f :!Sslash]
+                                               ;; number row symbols
+                                               [:q :!S1]
+                                               [:w :!S2]
+                                               [:e :!S3]
+                                               [:r :!S4]
+                                               [:t :!S5]
+                                               [:y :!S6]
+                                               [:u :!S7]
+                                               [:i :!S8]
+                                               [:o :!S9]
+                                               [:p :!S0]
+                                               [:open_bracket :!Shyphen]
+                                               ]}
          {:des "disable left shift for left-hand keys" :rules [:left_shift_mode 
                                                                [:1 :vk_none]
                                                                [:2 :vk_none]
@@ -99,5 +119,8 @@
                                                                [:c :vk_none]
                                                                [:v :vk_none]
                                                                [:b :vk_none]
+                                                               [:p :!Sp]
+                                                               [:o :!So]
+                                                               [:comma :!Scomma]
                                                                ]}
  ]}
