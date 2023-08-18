@@ -92,8 +92,12 @@
                                                                [:a :vk_none]
                                                                [:s :vk_none]
                                                                [:d :vk_none]
+                                                               [:f :vk_none]
+                                                               [:g :vk_none]
+                                                               [:z :vk_none]
                                                                [:x :vk_none]
                                                                [:c :vk_none]
                                                                [:v :vk_none]
+                                                               [:b :vk_none]
                                                                ]}
  ]}
