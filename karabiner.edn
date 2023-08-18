@@ -80,23 +80,30 @@
          {:des "cmd + e to escape" :rules [[:!Ce :escape]]}
          {:des "caps_lock alone to escape" :rules [[:caps_lock :escape]]}
          {:des "right-cmd for symbols" :rules [:right_cmd_mode 
+                                               ;; left hand
+                                               ;; top row
+                                               [:q :!Shyphen] ;; ?
+                                               [:w :!S2] ;; "
+                                               [:e :!S1] ;; !
+                                               [:r :!S0] ;; =
+                                               [:t :!S5] ;; %
                                                ;; parentheses
-                                               [:d :!S8]
-                                               [:s :!O8]
-                                               [:a :!SO8]
-                                               [:f :!Sslash]
-                                               ;; number row symbols
-                                               [:q :!S1]
-                                               [:w :!S2]
-                                               [:e :!S3]
-                                               [:r :!S4]
-                                               [:t :!S5]
-                                               [:y :!S6]
-                                               [:u :!S7]
-                                               [:i :!S8]
-                                               [:o :!S9]
-                                               [:p :!S0]
+                                               [:a :!SO8] ;; curly_brace
+                                               [:s :!O8] ;; bracket
+                                               [:d :!S8] ;; parenthesis
+                                               [:f :!Sslash] ;; underscore
+                                               [:g :!S7] ;; /
+                                               ;; bottom row
+                                               [:z :!S0]
+                                               [:x :!S0]
+                                               [:c :!S0]
+                                               [:v :!S0]
                                                [:open_bracket :!Shyphen]
+
+                                               ;; right hand
+                                               [:j [:!Sclose_bracket :spacebar]] ;; ^
+                                               [:k :non_us_backslash] ;; $
+                                               [:l [ :!Sequal_sign :spacebar ]] ;; `
                                                ]}
          {:des "disable left shift for left-hand keys" :rules [:left_shift_mode 
                                                                [:1 :vk_none]
@@ -119,8 +126,21 @@
                                                                [:c :vk_none]
                                                                [:v :vk_none]
                                                                [:b :vk_none]
-                                                               [:p :!Sp]
+                                                               ;; row 1
+                                                               [:y :!Sy]
+                                                               [:u :!Su]
+                                                               [:i :!Si]
                                                                [:o :!So]
+                                                               [:p :!Sp]
+                                                               ;; row 1
+                                                               [:h :!Sh]
+                                                               [:j :!Sj]
+                                                               [:k :!Sk]
+                                                               [:l :!Sl]
+                                                               ;; row 1
+                                                               [:b :!Sb]
+                                                               [:n :!Sn]
+                                                               [:m :!Sm]
                                                                [:comma :!Scomma]
                                                                ]}
  ]}
