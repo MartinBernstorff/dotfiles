@@ -52,8 +52,10 @@
                     "from": {
                         "modifiers": {
                             "mandatory": [
-                                "left_control",
-                                "left_shift"
+                                "left_command"
+                            ],
+                            "optional": [
+                                "any"
                             ]
                         },
                         "key_code": "e"
@@ -94,27 +96,6 @@
             ]
         },
         {
-            "description": "Right command",
-            "manipulators": [
-                {
-                    "type": "basic",
-                    "from": {
-                        "modifiers": {
-                            "optional": [
-                                "any"
-                            ]
-                        },
-                        "key_code": "caps_lock"
-                    },
-                    "to": [
-                        {
-                            "key_code": "left_command"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
             "description": "Super-key",
             "manipulators": [
                 {
@@ -125,7 +106,7 @@
                                 "any"
                             ]
                         },
-                        "key_code": "right_command"
+                        "key_code": "caps_lock"
                     },
                     "to": [
                         {

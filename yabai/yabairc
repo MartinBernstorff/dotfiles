@@ -22,5 +22,3 @@ yabai -m config mouse_follows_focus off
 # yabai -m config active_window_border_color 0xff775759 
 # yabai -m config normal_window_border_color 0xff222222 
 
-# Do not tile non-resizeable windows
-yabai -m signal --add event=window_created action='yabai -m query --windows --window $YABAI_WINDOW_ID | jq -er ".\"can-resize\" or .\"is-floating\"" || yabai -m window $YABAI_WINDOW_ID --toggle float'

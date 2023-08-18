@@ -1,94 +1,99 @@
-{;       
- :default true
- :alone 500
- :delay 200
- :held 500
- :simlayer-threshold 200
- :modifiers {:super-hyper [:command :shift :control :option :fn]
-             :hyper [:command :shift :control :option]
-             :cos [:command :shift :option]
-             :cst [:command :shift :control]
-             :co [:command :option]
-             :cs [:command :shift]
-             :ct [:command :control]
-             :to [:control :option]
-             :ts [:control :shift]
-             :os [:option :shift]
-             ;
-             }
+;; !  | means mandatory
+;; #  | means optional
+;; C  | left_command
+;; T  | left_control
+;; O  | left_option
+;; S  | left_shift
+;; F  | fn
+;; Q  | right_command
+;; W  | right_control
+;; E  | right_option
+;; R  | right_shift
+;; P  | caps_lock
+;; !! | mandatory command + control + optional + shift (hyper)
+;; ## | optional any
 
- :froms {;alias
-         :delete {:key :delete_or_backspace}
-         :return {:key :return_or_enter}
-         :tilde {:key :grave_accent_and_tilde}
-         ;
-         }
+;; examples
 
- :tos {;
-       :delete {:key :delete_or_backspace}
-       :return {:key :return_or_enter}
-       :tilde {:key :grave_accent_and_tilde}
-       :alfred {:key :spacebar :modi :option}
-       :launcher {:key :spacebar :modi :option} ;!spacebar
-       }
+;; !CTSequal_sign  | mandatory command control shift =
+;;                 | which is command control +
+;; !O#Sright_arrow | mandatory option optional any right_arrow
 
- :applications {;
-                :surfer [" com.google.Chrome "]
-                :editor [" com.microsoft.VSCode "];
-                }
- :layers {;
-          :caps_lock-mode {:key :caps_lock :alone
-                           {:key :escape}}
-          :escape-mode {:key :escape nil [;in case a mode gets stuck 😬
-                                          {:set ["fn-mode" 0]}
-                                          {:set ["opt-mode" 0]}
-                                          {:set ["shift-opt-mode" 0]}
-                                          {:set ["movement-mode" 0]}
-                                          {:set ["cursor-mode" 0]}
-                                          {:set ["delete-mode" 0]}
-                                          {:set ["editor-mode" 0]}
-                                          {:set ["snippet-mode" 0]}]}
-          :shift-mode {:key :shift}
-          :tab-mode {:key :tab}
-          :tilde-mode {:key :grave_accent_and_tilde :alone {:key :grave_accent_and_tilde}};
-          :command_mode {:key :left_command :alone {:key :left_command}};
+;; karabiner definition of mandatory and optional
+;; https://karabiner-elements.pqrs.org/docs/json/complex-modifications-manipulator-definition/from/modifiers/
+
+;; rule [<from> <to>]
+;; if simplified modifier is used in <to>, optional(#) definition will be
+;; ignored.
+
+;; FROM modifiers
+;; to understand better how modifiers work in karabiner
+;; karabiner definition of mandatory and optional
+;; https://karabiner-elements.pqrs.org/docs/json/complex-modifications-manipulator-definition/from/modifiers/
+
+;;    | no modifier
+;;                  input key maps to output key exactly
+;;                  adding any modifier will cancel the event
+
+;; !  | mandatory
+;;                  specified modifier is removed in output (to event)
+;;                  specified modifiers must be present for event to occur
+;;                  adding any other modifier will cancel the event
+
+;; #  | optional (single)
+;;                  specified modifier is kept in output (to event)
+;;                  one (or none) of the specified modifiers must be present
+;;                  adding any other modifier will cancel the event
+
+;; ## | optional any
+;;                  specified modifier is removed in output (to event)
+;;                  specified modifiers *must* be present for event to occur
+;;                  adding any other modifier will add to output event
+;;                  (what you typically expect, additional modifiers tacked on)
+;;
+;; need to prefix C T O S F with ! or #
+;;
+{:default true
+
+ :layers {:caps-mode {:key :caps_lock :alone {:key :vk_none}}
+        :right_cmd_mode {:key :right_command}
+        :left_shift_mode {:key :left_shift}
           }
- ;
- :simlayers {;
-            ;top row
-             :zero-mode {:key :0}
-             :quick-mode {:key :q}
-             :close-mode {:key :w}
-             ;
-             }
- :main [;
-        {:des "caps_lock"
-         :rules [:caps_lock-mode
-                 [:##caps_lock :##escape] ; ## Means run when tapped alone
-                 [:a :caps_lock]
-                 [:spacebar :return_or_enter]
-                 [:h :left_arrow]
-                 [:j :down_arrow]
-                 [:k :up_arrow]
-                 [:l :right_arrow]
-                 [:o :delete_or_backspace]]}
 
-        {:des "close-mode"
-         :rules [:close-mode
-                 [:a [{:key :w modi: :command}]]
-                 [:spacebar :return_or_enter]
-                 [:h :left_arrow]
-                 [:j :down_arrow]
-                 [:k :up_arrow]
-                 [:l :right_arrow]
-                 [:o :delete_or_backspace]]}
-
-        {:des "command_mode"
-         :rules [:command_mode
-                 [:e :escape]
-                 ;
-];
-};
-];
-};
-;
+ :main [
+        {:des "caps_lock + hjkl to arrow" 
+         :rules [:caps-mode 
+                 [:##h :##left_arrow] 
+                 [:##j :##down_arrow] 
+                 [:##k :##up_arrow] 
+                 [:##l :##right_arrow]
+                 [:##o :##delete_or_backspace]
+                 [:##spacebar :##return_or_enter]
+                 ;; App launching
+                 [:e :!TSe]
+                 [:d :!TSd]
+                 [:s :!TSs]
+                 [:t :!TSt]
+         ]
+         }
+         {:des "cmd + e to escape" :rules [[:!Ce :escape]]}
+         {:des "caps_lock alone to escape" :rules [[:caps_lock :escape]]}
+         {:des "disable left shift for left-hand keys" :rules [:left_shift_mode 
+                                                               [:1 :vk_none]
+                                                               [:2 :vk_none]
+                                                               [:3 :vk_none]
+                                                               [:4 :vk_none]
+                                                               [:5 :vk_none]
+                                                               [:q :vk_none]
+                                                               [:w :vk_none]
+                                                               [:e :vk_none]
+                                                               [:r :vk_none]
+                                                               [:t :vk_none]
+                                                               [:a :vk_none]
+                                                               [:s :vk_none]
+                                                               [:d :vk_none]
+                                                               [:x :vk_none]
+                                                               [:c :vk_none]
+                                                               [:v :vk_none]
+                                                               ]}
+ ]}
