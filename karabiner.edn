@@ -56,8 +56,9 @@
 {:default true
 
  :layers {:caps-mode {:key :caps_lock :alone {:key :vk_none}}
-        :right_cmd_mode {:key :right_command}
         :left_shift_mode {:key :left_shift}
+        :numpad_mode {:key :right_alt}
+        :right_cmd_mode {:key :right_command}
           }
 
  :main [
@@ -75,10 +76,23 @@
                  [:s :!TSs]
                  [:t :!TSt]
                  [:a :!TSa]
+                 [:backslash :!TSbackslash]
          ]
          }
          {:des "cmd + e to escape" :rules [[:!Ce :escape]]}
          {:des "caps_lock alone to escape" :rules [[:caps_lock :escape]]}
+         {:des "numpad" :rules [:numpad_mode [:w :1]
+                               [:w :1] 
+                               [:e :2] 
+                               [:r :3] 
+                               [:s :4] 
+                               [:d :5] 
+                               [:f :6] 
+                               [:x :7] 
+                               [:c :8] 
+                               [:v :9] 
+                               [:g :0] 
+                                ]}
          {:des "right-cmd for symbols" :rules [:right_cmd_mode 
                                                ;; left hand
                                                ;; top row
@@ -89,8 +103,8 @@
                                                [:a :!SO8] ;; curly_brace
                                                [:s :!O8] ;; bracket
                                                [:d :!S8] ;; parenthesis
-                                               [:f :!Shyphen] ;; ?
-                                               [:g :!S7] ;; /
+                                               [:f :!S7] ;; /
+                                               [:g :slash] ;; -
                                                ;; bottom row
                                                [:z :!S0]
                                                [:x :!S6]
@@ -103,9 +117,9 @@
                                                ;; right hand
                                                [:i [:!Sclose_bracket :spacebar]] ;; ^
                                                [:o :non_us_backslash] ;; $
-                                               [:u :!Sgrave_accent_and_tilde] ;; >
+                                               [:u :grave_accent_and_tilde] ;; <
                                                [:h :!S3] ;; #
-                                               [:j :grave_accent_and_tilde] ;; <
+                                               [:j :!Sgrave_accent_and_tilde] ;; >
                                                [:k :!S9] ;; )
                                                [:l :!O9] ;; ]
                                                [:semicolon :!SO9] ;; }
