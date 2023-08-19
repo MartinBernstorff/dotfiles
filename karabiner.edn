@@ -82,28 +82,35 @@
          {:des "right-cmd for symbols" :rules [:right_cmd_mode 
                                                ;; left hand
                                                ;; top row
-                                               [:q :!Shyphen] ;; ?
                                                [:w :!S2] ;; "
-                                               [:e :!S1] ;; !
-                                               [:r :!S0] ;; =
-                                               [:t :!S5] ;; %
+                                               [:e :!S0] ;; =
+                                               [:r :!S1] ;; !
                                                ;; parentheses
                                                [:a :!SO8] ;; curly_brace
                                                [:s :!O8] ;; bracket
                                                [:d :!S8] ;; parenthesis
-                                               [:f :!Sslash] ;; underscore
+                                               [:f :!Shyphen] ;; ?
                                                [:g :!S7] ;; /
                                                ;; bottom row
                                                [:z :!S0]
-                                               [:x :!S0]
+                                               [:x :!S6]
                                                [:c :!S0]
                                                [:v :!S0]
+                                               [:b :!SO7]
                                                [:open_bracket :!Shyphen]
+                                               [:spacebar :!Sslash] ;; underscore
 
                                                ;; right hand
-                                               [:j [:!Sclose_bracket :spacebar]] ;; ^
-                                               [:k :non_us_backslash] ;; $
-                                               [:l [ :!Sequal_sign :spacebar ]] ;; `
+                                               [:i [:!Sclose_bracket :spacebar]] ;; ^
+                                               [:o :non_us_backslash] ;; $
+                                               [:u :!Sgrave_accent_and_tilde] ;; >
+                                               [:h :!S3] ;; #
+                                               [:j :grave_accent_and_tilde] ;; <
+                                               [:k :!S9] ;; )
+                                               [:l :!O9] ;; ]
+                                               [:semicolon :!SO9] ;; }
+                                               [:m :!S5] ;; %
+                                               [:backslash :!Sbackslash] ;; `
                                                ]}
          {:des "disable left shift for left-hand keys" :rules [:left_shift_mode 
                                                                [:1 :vk_none]
@@ -115,7 +122,6 @@
                                                                [:w :vk_none]
                                                                [:e :vk_none]
                                                                [:r :vk_none]
-                                                               [:t :vk_none]
                                                                [:a :vk_none]
                                                                [:s :vk_none]
                                                                [:d :vk_none]
@@ -127,6 +133,7 @@
                                                                [:v :vk_none]
                                                                [:b :vk_none]
                                                                ;; row 1
+                                                               [:t :!St]
                                                                [:y :!Sy]
                                                                [:u :!Su]
                                                                [:i :!Si]
@@ -142,5 +149,6 @@
                                                                [:n :!Sn]
                                                                [:m :!Sm]
                                                                [:comma :!Scomma]
+                                                               [:period :!Speriod]
                                                                ]}
  ]}
