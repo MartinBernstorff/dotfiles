@@ -57,8 +57,8 @@
 
  :layers {:caps-mode {:key :caps_lock :alone {:key :vk_none}}
         :left_shift_mode {:key :left_shift}
-        :numpad_mode {:key :right_alt}
         :right_cmd_mode {:key :right_command}
+        :fn_layer {:key :fn}
           }
 
  :main [
@@ -68,7 +68,7 @@
                  [:##j :##down_arrow] 
                  [:##k :##up_arrow] 
                  [:##l :##right_arrow]
-                 [:##o :##delete_or_backspace]
+                 [:##o :delete_or_backspace]
                  [:##spacebar :##return_or_enter]
                  ;; App launching
                  [:e :!TSe]
@@ -81,18 +81,6 @@
          }
          {:des "cmd + e to escape" :rules [[:!Ce :escape]]}
          {:des "caps_lock alone to escape" :rules [[:caps_lock :escape]]}
-         {:des "numpad" :rules [:numpad_mode [:w :1]
-                               [:w :1] 
-                               [:e :2] 
-                               [:r :3] 
-                               [:s :4] 
-                               [:d :5] 
-                               [:f :6] 
-                               [:x :7] 
-                               [:c :8] 
-                               [:v :9] 
-                               [:g :0] 
-                                ]}
          {:des "right-cmd for symbols" :rules [:right_cmd_mode 
                                                ;; left hand
                                                ;; top row
@@ -108,10 +96,10 @@
                                                ;; bottom row
                                                [:z :!S0]
                                                [:x :!S6]
-                                               [:c :!S0]
+                                               [:c :!Sbackslash] ;; *
                                                [:v :!S0]
                                                [:b :!SO7]
-                                               [:open_bracket :!Shyphen]
+                                               [:open_bracket :!Shyphen] 
                                                [:spacebar :!Sslash] ;; underscore
 
                                                ;; right hand
@@ -124,7 +112,6 @@
                                                [:l :!O9] ;; ]
                                                [:semicolon :!SO9] ;; }
                                                [:m :!S5] ;; %
-                                               [:backslash :!Sbackslash] ;; `
                                                ]}
          {:des "disable left shift for left-hand keys" :rules [:left_shift_mode 
                                                                [:1 :vk_none]
@@ -154,6 +141,7 @@
                                                                [:o :!So]
                                                                [:p :!Sp]
                                                                ;; row 1
+                                                               [:tab :!Stab]
                                                                [:h :!Sh]
                                                                [:j :!Sj]
                                                                [:k :!Sk]
@@ -163,6 +151,20 @@
                                                                [:n :!Sn]
                                                                [:m :!Sm]
                                                                [:comma :!Scomma]
-                                                               [:period :!Speriod]
+                                                               [:period :!Speriod] 
+                                                               [:hyphen :!Shyphen] ;; `
                                                                ]}
- ]}
+         {:des "fn_layer" :rules [:fn_layer 
+                                                               [:1 :display_brightness_decrement]
+                                                               [:2 :display_brightness_increment]
+                                                               [:6 :f6]
+                                                               [:7 :rewind]
+                                                               [:8 :play_or_pause]
+                                                               [:9 :fastforward]
+                                                               [:0 :volume_decrement]
+         ]
+         }
+]
+}
+
+
