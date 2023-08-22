@@ -82,39 +82,41 @@
                   ]
           }
          {:des "cmd + e to escape" :rules [[:!Ce :escape]]}
+         {:des "disable return" :rules [[:return_or_enter :vk_none]]}
          {:des "caps_lock alone to escape" :rules [[:caps_lock :escape]]}
          {:des "right-cmd for symbols" :rules [:right_cmd_mode 
                                                ;; left hand
                                                ;; top row
-                                               [:t :!S2] ;; "
-                                               [:g :!Speriod] ;; =
-                                               [:r :!S1] ;; !
+                                               [:q :!S2] ;; ", quotations
+                                               [:k :!Speriod] ;; :, kolon
+                                               [:l :!Scomma] ;; next to the colon
+                                               [:r :!S1] ;; !, rage
                                                ;; parentheses
-                                               [:x :!SO8] ;; curly_brace
+                                               [:x :!SO8] ;; {
                                                [:c :!SO9] ;; }
-                                               [:w :!O8] ;; 
+                                               [:w :!O8] ;; [
                                                [:e :!O9] ;; ]
-                                               [:s :!S8] ;; parenthesis
+                                               [:s :!S8] ;; (
                                                [:d :!S9] ;; )
-                                               [:f :!S7] ;; /
+                                               [:f :!S7] ;; /, find in vim
                                                ;; bottom row
-                                               [:z :!S0] ;; =
-                                               [:x :!S6] ;; {
-                                               [:v :!S0] ;; =
-                                               [:b :!SO7] ;; \
-                                               [:a :!S6] ;; &
-                                               [:p :hyphen] ;; +
-                                               [:n :slash] ;; +
-                                               [:k :!Snon_us_pound] ;; *
+                                               [:x :!S6] ;; { 
+                                               [:v :!S0] ;; =, validated equality
+                                               [:b :!SO7] ;; \, backslash
+                                               [:a :!S6] ;; &, and
+                                               [:p :hyphen] ;; +, plus
+                                               [:n :slash] ;; -, new bullet
+                                               [:g :!Snon_us_pound] ;; *, galactic body
                                                [:open_bracket :!Shyphen] ;; 
-                                               [:spacebar :!Sslash] ;; underscore
-                                               
-                                               ;; right hand
-                                               [:i [:!Sclose_bracket :spacebar]] ;; ^
-                                               [:o :non_us_backslash] ;; $
-                                               [:j :!Sgrave_accent_and_tilde] ;; >
-                                               [:h :grave_accent_and_tilde] ;; <
-                                               [:l :!S3] ;; #
-                                               [:m :!S5] ;; %
+                                               [:spacebar :!Sslash] ;; _ 
+                                               [:i [:!Sclose_bracket :spacebar]] ;; ^, forward/backwards in vim
+                                               [:o :non_us_backslash] ;; $, forward/backward in vim
+                                               [:j :!Sgrave_accent_and_tilde] ;; >, right relative to h
+                                               [:h :grave_accent_and_tilde] ;; <, left relative to j
+                                               [:t :!S3] ;; hashTag
+                                               [:y :vk_none] ;;
+                                               [:z :vk_none] ;; 
+                                               [:u :vk_none] ;; 
+                                               [:m :!S5] ;; %, matching bracket in vim
                                                ]}
          ]}
