@@ -112,8 +112,8 @@
                                                ;; right hand
                                                [:i [:!Sclose_bracket :spacebar]] ;; ^
                                                [:o :non_us_backslash] ;; $
-                                               [:u :!Sgrave_accent_and_tilde] ;; >
-                                               [:j :grave_accent_and_tilde] ;; <
+                                               [:j :!Sgrave_accent_and_tilde] ;; >
+                                               [:h :grave_accent_and_tilde] ;; <
                                                [:l :!S3] ;; #
                                                [:m :!S5] ;; %
                                                ]}
