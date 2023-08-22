@@ -53,3 +53,5 @@ nvim/plugin/packer_compiled.lua
 karabiner/automatic_backups
 gh/hosts.yml
 karabiner/.clj-kondo/.cache/v1
+.lsp/.cache/db.transit.json
+.clj-kondo/.cache/v1/lock
