@@ -30,7 +30,6 @@
 ;; to understand better how modifiers work in karabiner
 ;; karabiner definition of mandatory and optional
 ;; https://karabiner-elements.pqrs.org/docs/json/complex-modifications-manipulator-definition/from/modifiers/
-
 ;;    | no modifier
 ;;                  input key maps to output key exactly
 ;;                  adding any modifier will cancel the event
@@ -57,7 +56,7 @@
 
  :layers {:caps-mode {:key :caps_lock :alone {:key :vk_none}}
           :left_shift_mode {:key :left_shift}
-          :right_cmd_mode {:key :right_command}
+          :symbols_mode {:key :spacebar :alone {:key :spacebar}}
           }
 
   :devices {:vortex [{:vendor_id 1241 :product_id 402}]}
@@ -65,25 +64,29 @@
   :main [
          {:des "caps_lock + hjkl to arrow" 
           :rules [:caps-mode 
+                  [:##i :##return_or_enter] 
+                  [:##o :##delete_or_backspace]
                   [:##h :##left_arrow] 
                   [:##j :##down_arrow] 
                   [:##k :##up_arrow] 
                   [:##l :##right_arrow]
-                  [:##o :##delete_or_backspace]
+                  [:##n :tab]
                   [:##spacebar :##return_or_enter]
                  ;; App launching
                   [:e :!TSe]
-                  [:d :!TSd]
-                  [:s :!TSs]
-                  [:t :!TSt]
                   [:a :!TSa]
+                  [:s :!TSs]
+                  [:d :!TSd]
+                  [:f :!TSf]
+                  [:t :!TSt]
                   [:##r :!TSr]
                   [:backslash :!TSbackslash]
                   ]
           }
          {:des "cmd + e to escape" :rules [[:!Ce :escape]]}
+         {:des "shift" :rules [[:grave_accent_and_tilde :left_shift]]}
          {:des "caps_lock alone to escape" :rules [[:caps_lock :escape]]}
-         {:des "right-cmd for symbols" :rules [:right_cmd_mode 
+         {:des "symbols" :rules [:symbols_mode 
                                                ;; left hand
                                                ;; top row
                                                [:q :!S2] ;; ", quotations
@@ -107,13 +110,12 @@
                                                [:n :slash] ;; -, new bullet
                                                [:g :!Snon_us_pound] ;; *, galactic body
                                                [:open_bracket :!Shyphen] ;; 
-                                               [:spacebar :!Sslash] ;; _ 
+                                               [:u :!Sslash] ;; _ 
                                                [:i [:!Sclose_bracket :spacebar]] ;; ^, forward/backwards in vim
                                                [:o :non_us_backslash] ;; $, forward/backward in vim
                                                [:j :!Sgrave_accent_and_tilde] ;; >, right relative to h
                                                [:h :grave_accent_and_tilde] ;; <, left relative to j
                                                [:t :!S3] ;; hashTag
-                                               [:u :!Oclose_bracket] ;; User
                                                [:z :vk_none] ;; 
                                                [:u :vk_none] ;; 
                                                [:m :!S5] ;; %, matching bracket in vim
