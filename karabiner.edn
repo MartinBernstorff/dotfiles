@@ -84,7 +84,6 @@
           }
          {:des "cmd + e to escape" :rules [[:!Ce :escape]]}
          {:des "shift" :rules [[:grave_accent_and_tilde :left_shift]]}
-         {:des "caps_lock alone to escape" :rules [[:caps_lock :escape]]}
          {:des "symbols" :rules [:symbols_mode 
                                                ;; left hand
                                                ;; top row
