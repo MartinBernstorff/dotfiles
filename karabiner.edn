@@ -56,7 +56,6 @@
 
  :layers {:caps-mode {:key :caps_lock :alone {:key :vk_none}}
           :left_shift_mode {:key :left_shift}
-          :symbols_mode {:key :spacebar :alone {:key :spacebar}}
           }
 
   :devices {:vortex [{:vendor_id 1241 :product_id 402}]}
@@ -110,7 +109,7 @@
                                                [:n :slash] ;; -, new bullet
                                                [:g :!Snon_us_pound] ;; *, galactic body
                                                [:open_bracket :!Shyphen] ;; 
-                                               [:u :!Sslash] ;; _ 
+                                               [:u :!Oclose_bracket] ;; _ 
                                                [:i [:!Sclose_bracket :spacebar]] ;; ^, forward/backwards in vim
                                                [:o :non_us_backslash] ;; $, forward/backward in vim
                                                [:j :!Sgrave_accent_and_tilde] ;; >, right relative to h
