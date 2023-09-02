@@ -60,7 +60,7 @@
             :delimeter_mode {:key :d} 
             :fire_mode {:key :f}
              }
-:simlayer-threshold 200 :main [
+:simlayer-threshold 150 :main [
          {:des "app_mode" :rules [:app_mode 
                                     [:e :!TSe]
                                     [:s :!TSs]
@@ -103,7 +103,7 @@
                                     [:o [:!Sequal_sign :spacebar]] ;; `
                                     [:j :!S8] ;; (
                                     [:k :!S9] ;; )
-                                    [:l :!Speriod] ;; "
+                                    [:l :!Speriod] ;; :, liminal
                                     [:m :!SO8] ;; {
                                     [:comma :!SO9] ;; }
                                     [:period :backslash] ;; '
