@@ -55,7 +55,7 @@
 {:default true
   :devices {:vortex [{:vendor_id 1241 :product_id 402}]} 
  :simlayers {
-            :app_mode {:key :a}
+            :app_mode {:key :z}
             :symbol_mode {:key :s}
             :delimeter_mode {:key :d} 
             :fire_mode {:key :f}
