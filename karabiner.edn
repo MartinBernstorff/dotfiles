@@ -59,6 +59,7 @@
             :symbol_mode {:key :s}
             :delimeter_mode {:key :d} 
             :fire_mode {:key :f}
+            :number_mode {:key :x}
              }
 :simlayer-threshold 100 :main [
          {:des "app_mode" :rules [:app_mode 
@@ -78,6 +79,7 @@
                                     [:f :!Sslash];; _, feature
                                     [:g :!Sbackslash];; *, globe
 
+                                    ;; right hand
                                     [:y :grave_accent_and_tilde] ;; ^, unbelieveable hat
                                     [:u [:!Sclose_bracket :spacebar]] ;; ^, unbelieveable hat
                                     [:i :non_us_backslash] ;; $, income
@@ -119,38 +121,16 @@
                                     [:##spacebar :return_or_enter]
                                     ]}
          {:des "shift" :rules [[:grave_accent_and_tilde :left_shift]]}
-         {:des "symbols" :rules [:symbols_mode 
-                                               ;; left hand
-                                               ;; top row
-                                 [:q :!S2] ;; ", quotations
-                                 [:k :!Speriod] ;; :, kolon
-                                 [:l :!Scomma] ;; next to the colon
-                                 [:r :!S1] ;; !, rage
-                                               ;; parentheses
-                                 [:x :!SO8] ;; {
-                                 [:c :!SO9] ;; }
-                                 [:w :!O8] ;; [
-                                 [:e :!O9] ;; ]
-                                 [:s :!S8] ;; (
-                                 [:d :!S9] ;; )
-                                 [:f :!S7] ;; /, find in vim
-                                               ;; bottom row
-                                 [:x :!S6] ;; { 
-                                 [:v :!S0] ;; =, validated equality
-                                 [:b :!SO7] ;; \, backslash
-                                 [:a :!S6] ;; &, and
-                                 [:p :hyphen] ;; +, plus
-                                 [:n :slash] ;; -, new bullet
-                                 [:g :!Snon_us_pound] ;; *, galactic body
-                                 [:open_bracket :!Shyphen] ;; 
-                                 [:u :!Oclose_bracket] ;; _ 
-                                 [:i [:!Sclose_bracket :spacebar]] ;; ^, forward/backwards in vim
-                                 [:o :non_us_backslash] ;; $, forward/backward in vim
-                                 [:j :!Sgrave_accent_and_tilde] ;; >, right relative to h
-                                 [:h :grave_accent_and_tilde] ;; <, left relative to j
-                                 [:t :!S3] ;; hashTag
-                                 [:z :vk_none] ;; 
-                                 [:u :vk_none] ;; 
-                                 [:m :!S5] ;; %, matching bracket in vim
-                                 ]}
+         {:des "number mode" :rules [:number_mode
+                                     [:u :7]
+                                     [:i :8]
+                                     [:o :9]
+                                     [:j :4]
+                                     [:k :5]
+                                     [:l :6]
+                                     [:n :0]
+                                     [:m :1]
+                                     [:comma :2]
+                                     [:period :3]
+                                     ]}
          ]}
